@@ -1,4 +1,4 @@
-package qa.demo;
+package qa.demo.tests;
 
 import org.junit.jupiter.api.Test;
 
