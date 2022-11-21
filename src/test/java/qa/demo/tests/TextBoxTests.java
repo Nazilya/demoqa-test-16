@@ -25,5 +25,6 @@ public class TextBoxTests extends BaseTest {
         $("#output #email").shouldHave(text("Egor@egor.com"));
         $("#output #currentAddress").shouldHave(text("Some address 1"));
         $("#output #permanentAddress").shouldHave(text("Other address 1"));
+
     }
 }

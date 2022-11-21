@@ -3,7 +3,6 @@ package qa.demo.tests;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -28,8 +27,7 @@ public class PracticeFormTests extends BaseTest {
         $(".react-datepicker__year-select").selectOption("2000");
         $x("//div[.='14']").click();
 
-        $("#subjectsInput").setValue("English");
-        $(".subjects-auto-complete__menu").$(byText("English")).click();
+        $("#subjectsInput").setValue("English").pressEnter();
         $("#hobbiesWrapper").$(byText("Reading")).click();
 
         $("#uploadPicture").uploadFile(new File("src/test/resources/cat.jpg"));

@@ -40,7 +40,6 @@ public class RegistrationWithPageObjectsTests extends BaseTest {
                 .checkTableResult("Student Email", email)
                 .checkTableResult("Date of Birth", dayBirth+" "+ monthBirth+","+yearBirth)
                 .checkTableResult("State and City", state + " " + city);
-
     }
 }
 

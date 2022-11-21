@@ -113,6 +113,7 @@ public class RegistrationPage {
     public RegistrationPage checkTableResult(String key, String value) {
         registrationResultsModal.checkTable(key, value);
         return this;
+
     }
 
 }
