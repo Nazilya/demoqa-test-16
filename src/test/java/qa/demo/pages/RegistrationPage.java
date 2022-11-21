@@ -3,9 +3,7 @@ package qa.demo.pages;
 import com.codeborne.selenide.SelenideElement;
 import qa.demo.pages.components.CalendarComponent;
 import qa.demo.pages.components.RegistrationResultsModal;
-
 import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -20,7 +18,7 @@ public class RegistrationPage {
             userEmailInput = $("#userEmail"),
             Gender = $("#genterWrapper"),
             phoneNumber = $("#userNumber"),
-            subjectsInput = $x("//input[@id='subjectsInput']"),
+            subjectsInput = $("#subjectsInput"),
             hobbiesWrapper = $("#hobbiesWrapper"),
             uploadPicture = $("#uploadPicture"),
             currentAddress = $("#currentAddress"),

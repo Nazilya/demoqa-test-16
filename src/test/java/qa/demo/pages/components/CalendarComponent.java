@@ -1,7 +1,6 @@
 package qa.demo.pages.components;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
 
 public class CalendarComponent {
     public void setDate(String day, String month, String year) {

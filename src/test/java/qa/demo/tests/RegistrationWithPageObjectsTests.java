@@ -1,7 +1,6 @@
 package qa.demo.tests;
 
 import org.junit.jupiter.api.Test;
-
 public class RegistrationWithPageObjectsTests extends BaseTest {
     @Test
     void studentRegistrationFormTest() {
@@ -14,9 +13,9 @@ public class RegistrationWithPageObjectsTests extends BaseTest {
         String monthBirth = "May";
         String yearBirth = "2000";
         String subject = "English";
-        String hobbie = "Reading";
+        String hobbies = "Reading";
         String pictureDirectory = "src/test/resources/cat.jpg";
-        String adress = "City, street, 1";
+        String address = "City, street, 1";
         String state = "Rajasthan";
         String city = "Jaipur";
 
@@ -28,15 +27,15 @@ public class RegistrationWithPageObjectsTests extends BaseTest {
                 .setPhoneNumber(phoneNumber)
                 .setBirthDate(dayBirth, monthBirth, yearBirth)
                 .setSubject(subject)
-                .setHobbiesWrapper(hobbie)
+                .setHobbiesWrapper(hobbies)
                 .uploadPictureFile(pictureDirectory)
-                .setCurrentAddress(adress)
+                .setCurrentAddress(address)
                 .setStateCity(state)
                 .selectCityInForm(city)
                 .clickSubmit()
                 .verifyResultsModalAppears()
                 .checkTableResult("Student Name", firstName + " " + lastName)
-                .checkTableResult("Address", adress)
+                .checkTableResult("Address", address)
                 .checkTableResult("Hobbies", "Reading")
                 .checkTableResult("Student Email", email)
                 .checkTableResult("Date of Birth", dayBirth+" "+ monthBirth+","+yearBirth)
