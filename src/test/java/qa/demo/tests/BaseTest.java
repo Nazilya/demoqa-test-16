@@ -1,9 +1,11 @@
-package qa.demo;
+package qa.demo.tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import qa.demo.pages.RegistrationPage;
 
 public class BaseTest {
+    RegistrationPage registrationPage = new RegistrationPage();
     @BeforeAll
     static void beforeAll() {
         Configuration.holdBrowserOpen = true;
