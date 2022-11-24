@@ -60,7 +60,6 @@ public class RandomUtils {
         boolean useLetters = true;
         boolean useNumbers = false;
         String generatedString = RandomStringUtils.random(length, useLetters, useNumbers);
-
         System.out.println(generatedString);
     }
 
