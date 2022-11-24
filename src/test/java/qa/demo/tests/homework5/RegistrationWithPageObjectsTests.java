@@ -1,6 +1,8 @@
-package qa.demo.tests;
+package qa.demo.tests.homework5;
 
 import org.junit.jupiter.api.Test;
+import qa.demo.tests.BaseTest;
+
 public class RegistrationWithPageObjectsTests extends BaseTest {
     @Test
     void studentRegistrationFormTest() {
