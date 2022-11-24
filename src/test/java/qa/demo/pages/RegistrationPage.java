@@ -1,22 +1,25 @@
 package qa.demo.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import qa.demo.elements.Button;
 import qa.demo.pages.components.CalendarComponent;
 import qa.demo.pages.components.RegistrationResultsModal;
 import java.io.File;
+import java.util.Date;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
-    private CalendarComponent calendarComponent = new CalendarComponent();
-    private RegistrationResultsModal registrationResultsModal = new RegistrationResultsModal();
+    CalendarComponent calendarComponent = new CalendarComponent();
+    RegistrationResultsModal registrationResultsModal = new RegistrationResultsModal();
     private final String TITLE_TEXT = "Student Registration Form";
     private SelenideElement
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmailInput = $("#userEmail"),
-            Gender = $("#genterWrapper"),
+            gender = $("#genterWrapper"),
             phoneNumber = $("#userNumber"),
             subjectsInput = $("#subjectsInput"),
             hobbiesWrapper = $("#hobbiesWrapper"),
@@ -26,8 +29,8 @@ public class RegistrationPage {
             stateCity = $("#stateCity-wrapper"),
             city = $("#city"),
             selectCity = $("#city"),
-            submit = $("#submit"),
             dateOfBirthLocator = $("#dateOfBirthInput");
+    Button submit = new Button("Submit", $("#submit"));
 
 
     public RegistrationPage openPage() {
@@ -54,7 +57,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setGender(String value) {
-        Gender.$(byText(value)).click();
+        gender.$(byText(value)).click();
         return this;
     }
 
@@ -106,6 +109,9 @@ public class RegistrationPage {
         calendarComponent.setDate(day, month, year);
         return this;
     }
+
+
+
     public RegistrationPage verifyResultsModalAppears() {
         registrationResultsModal.verifyModalAppears();
         return this;
