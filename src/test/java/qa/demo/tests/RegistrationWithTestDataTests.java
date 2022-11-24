@@ -6,7 +6,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static qa.demo.tests.TestData.*;
 
 public class RegistrationWithTestDataTests extends BaseTest {
 
@@ -46,11 +45,11 @@ public class RegistrationWithTestDataTests extends BaseTest {
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
 
-        $("#firstName").setValue(firstName);
-        $("#lastName").setValue(lastName);
-        $("#userEmail").setValue(userEmail);
-        $("#genterWrapper").$(byText("Male")).click();
-        $("#userNumber").setValue(userNumber);
+//        $("#firstName").setValue(firstName);
+//        $("#lastName").setValue(lastName);
+//        $("#userEmail").setValue(userEmail);
+//        $("#genterWrapper").$(byText("Male")).click();
+//        $("#userNumber").setValue(userNumber);
 
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("May");
@@ -71,8 +70,8 @@ public class RegistrationWithTestDataTests extends BaseTest {
         $("#submit").click();
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $(".table-responsive").shouldHave(text(firstName), text(lastName), text("EgorIvanov@google.com"),
-                text("14 May,2000"), text("Jaipur"));
+//        $(".table-responsive").shouldHave(text(firstName), text(lastName), text("EgorIvanov@google.com"),
+//                text("14 May,2000"), text("Jaipur"));
 
         checkTable("Address", "City, street, 1");
         checkTable("Hobbies", "Reading");
@@ -81,6 +80,6 @@ public class RegistrationWithTestDataTests extends BaseTest {
     void checkTable(String key, String value) {
         $(".table-responsive").$(byText(key)).parent().shouldHave(text(value));
     }
-    
+
 }
 
