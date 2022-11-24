@@ -8,7 +8,7 @@ import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomUtils {
-    Faker faker = new Faker();
+    static Faker faker = new Faker();
     static Random random = new Random();
 
     /*
@@ -76,13 +76,13 @@ public class RandomUtils {
     }
 
 
-    public String getSubject() {
+    public static String getSubject() {
         String[] subjects = {"English", "Math", "Arts", "Physics", "Chemistry", "Economics", "Biology"};
         int index = random.nextInt(subjects.length);
         return subjects[index];
     }
 
-    public String getMonth() {
+    public static String getMonth() {
         String[] arrMonth = {"January", "February", "March", "April", "May",
                 "June", "July", "August", "September", "October", "November", "December"};
         int index = random.nextInt(arrMonth.length);
