@@ -1,6 +1,7 @@
-package qa.demo.tests;
+package qa.demo.tests.homework3;
 
 import org.junit.jupiter.api.Test;
+import qa.demo.tests.BaseTest;
 
 import java.io.File;
 import static com.codeborne.selenide.Condition.text;
