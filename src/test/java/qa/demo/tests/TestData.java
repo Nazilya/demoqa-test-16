@@ -3,7 +3,6 @@ package qa.demo.tests;
 import com.github.javafaker.Faker;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
-
 import static qa.demo.utils.RandomUtils.*;
 
 public class TestData {

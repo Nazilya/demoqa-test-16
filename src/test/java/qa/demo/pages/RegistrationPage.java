@@ -5,8 +5,6 @@ import qa.demo.elements.Button;
 import qa.demo.pages.components.CalendarComponent;
 import qa.demo.pages.components.RegistrationResultsModal;
 import java.io.File;
-import java.util.Date;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -110,16 +108,14 @@ public class RegistrationPage {
         return this;
     }
 
-
-
     public RegistrationPage verifyResultsModalAppears() {
         registrationResultsModal.verifyModalAppears();
         return this;
     }
+
     public RegistrationPage checkTableResult(String key, String value) {
         registrationResultsModal.checkTable(key, value);
         return this;
-
     }
 
 }
