@@ -2,11 +2,9 @@ package qa.demo.tests;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
-
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -66,17 +64,6 @@ public class RegistrationWithFakerTests extends BaseTest {
 
     void checkTable(String key, String value) {
         $(".table-responsive").$(byText(key)).parent().shouldHave(text(value));
-    }
-
-    @Test
-    void someRegistrationFormTest() {
-        open("/automation-practice-form");
-        $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
-
-        $("#firstName").setValue(firstName);
-        $("#lastName").setValue(lastName);
-        $("#userEmail").setValue(userEmail);
-        $("#genterWrapper").$(byText("Male")).click();
     }
 }
 
