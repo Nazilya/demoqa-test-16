@@ -1,4 +1,4 @@
-package qa.demo.examples;
+package qa.demo.lesson3;
 
 import org.junit.jupiter.api.*;
 

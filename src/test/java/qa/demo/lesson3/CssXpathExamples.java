@@ -1,4 +1,4 @@
-package qa.demo.examples;
+package qa.demo.lesson3;
 
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
