@@ -1,6 +1,8 @@
-package qa.demo.tests;
+package qa.demo.lesson6;
 
 import org.junit.jupiter.api.Test;
+import qa.demo.tests.BaseTest;
+
 import java.io.File;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
