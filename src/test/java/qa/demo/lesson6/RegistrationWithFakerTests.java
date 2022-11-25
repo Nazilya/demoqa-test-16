@@ -1,7 +1,9 @@
-package qa.demo.tests;
+package qa.demo.lesson6;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
+import qa.demo.tests.BaseTest;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Locale;

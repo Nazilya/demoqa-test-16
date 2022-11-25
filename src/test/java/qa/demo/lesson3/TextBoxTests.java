@@ -1,7 +1,9 @@
-package qa.demo.tests;
+package qa.demo.lesson3;
 
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
+import qa.demo.tests.BaseTest;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;

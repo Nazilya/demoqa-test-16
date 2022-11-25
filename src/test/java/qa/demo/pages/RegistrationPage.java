@@ -4,14 +4,17 @@ import com.codeborne.selenide.SelenideElement;
 import qa.demo.elements.Button;
 import qa.demo.pages.components.CalendarComponent;
 import qa.demo.pages.components.RegistrationResultsModal;
+import qa.demo.pages.components.StateAndCityComponent;
+
 import java.io.File;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
-    CalendarComponent calendarComponent = new CalendarComponent();
-    RegistrationResultsModal registrationResultsModal = new RegistrationResultsModal();
+    private CalendarComponent calendarComponent = new CalendarComponent();
+    private RegistrationResultsModal registrationResultsModal = new RegistrationResultsModal();
+    private StateAndCityComponent stateAndCityComponent = new StateAndCityComponent();
     private final String TITLE_TEXT = "Student Registration Form";
     private SelenideElement
             firstNameInput = $("#firstName"),
@@ -23,10 +26,6 @@ public class RegistrationPage {
             hobbiesWrapper = $("#hobbiesWrapper"),
             uploadPicture = $("#uploadPicture"),
             currentAddress = $("#currentAddress"),
-            state = $("#state"),
-            stateCity = $("#stateCity-wrapper"),
-            city = $("#city"),
-            selectCity = $("#city"),
             dateOfBirthLocator = $("#dateOfBirthInput");
     Button submit = new Button("Submit", $("#submit"));
 
@@ -84,16 +83,9 @@ public class RegistrationPage {
         currentAddress.setValue(value);
         return this;
     }
+    public RegistrationPage setStateAndCity(String value1, String value2) {
+        stateAndCityComponent.setStateAndCity(value1, value2);
 
-    public RegistrationPage setStateCity(String value) {
-        state.click();
-        stateCity.$(byText(value)).click();
-        return this;
-    }
-
-    public RegistrationPage selectCityInForm(String value) {
-        city.click();
-        selectCity.$(byText(value)).click();
         return this;
     }
 

@@ -21,10 +21,9 @@ public class RegistrationTests extends BaseTest {
                 .setHobbiesWrapper(studentsData.hobby)
                 .uploadPictureFile(studentsData.pictureDirectory)
                 .setCurrentAddress(studentsData.currentAddress)
-                .setStateCity(studentsData.state)
-                .selectCityInForm(studentsData.city)
-                .clickSubmit()
-                .verifyResultsModalAppears()
+                .setStateAndCity(studentsData.state, studentsData.city)
+                .clickSubmit();
+        registrationPage.verifyResultsModalAppears()
                 .checkTableResult("Student Name", studentsData.firstName + " " + studentsData.lastName)
                 .checkTableResult("Address", studentsData.currentAddress)
                 .checkTableResult("Hobbies", studentsData.hobby)
